@@ -82,7 +82,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-httpServer.listen(config.port, () => {
+httpServer.listen(config.port, '0.0.0.0', () => {
   console.log(`CTMS Backend running on port ${config.port}`);
   console.log(`Environment: ${config.nodeEnv}`);
   console.log(`Client URL: ${config.clientUrl}`);
